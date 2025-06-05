@@ -10,6 +10,16 @@ import {
 import type { Route } from "./+types/root";
 import "./app.css";
 
+//clerk
+import { ClerkProvider } from '@clerk/clerk-react'
+
+// Import your Publishable Key
+const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
+
+if (!PUBLISHABLE_KEY) {
+  throw new Error('Missing Publishable Key')
+}
+
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
   {
@@ -41,8 +51,13 @@ export function Layout({ children }: { children: React.ReactNode }) {
   );
 }
 
+//clerk
 export default function App() {
-  return <Outlet />;
+  return (
+    <ClerkProvider publishableKey={PUBLISHABLE_KEY} afterSignOutUrl="/">
+      <Outlet />
+    </ClerkProvider>
+  );
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
