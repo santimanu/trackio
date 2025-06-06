@@ -4,7 +4,7 @@ export default function profile() {
     return (
     <>
       <SignedIn>
-        <h1>Dashboard privado</h1>
+        <h1>Profile:</h1>
         {/* Tu contenido */}
       </SignedIn>
 

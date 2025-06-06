@@ -1,14 +1,21 @@
 
-export default function Dashboard() {
+export default function Header() {
   return (
-    <header className="flex w-full h-9 ">
-        <div>
+    <header className="flex w-full h-auto justify-center items-center">
+        <div className=" flex justify-around items-center">
+            <div>
 
-        </div>
+            </div>
 
-        <div>
-
+            <nav>
+              <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+            </nav>
         </div>
     </header>
   );
-}
+} 
