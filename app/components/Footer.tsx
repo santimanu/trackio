@@ -1,7 +1,7 @@
 // components/Footer.tsx
 export default function Footer() {
   return (
-    <footer className="bg-white border-t border-gray-200 mt-16">
+    <footer className="bg-white border-t border-gray-200 w-full">
       <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-gray-700">
         
         <div>
@@ -30,16 +30,15 @@ export default function Footer() {
 
         <div>
           <h4 className="font-semibold mb-2">Follow us</h4>
-          <div className="flex space-x-4">
-            <a href="#" className="hover:text-blue-600" aria-label="Twitter">
-              <i className="fab fa-twitter"></i>
-            </a>
+          <div className="flex space-x-4 flex-col">
+
             <a href="#" className="hover:text-blue-600" aria-label="Instagram">
-              <i className="fab fa-instagram"></i>
+              <i className="fab fa-instagram">Instagram</i>
             </a>
             <a href="#" className="hover:text-blue-600" aria-label="LinkedIn">
-              <i className="fab fa-linkedin"></i>
+              <i className="fab fa-linkedin">LinkedIn</i>
             </a>
+
           </div>
         </div>
       </div>
